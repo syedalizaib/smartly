@@ -1,9 +1,8 @@
 # Smartly-A Trivia App
 
-![icon](/assets/icon.png)
-
 # Breif Overview
 
+<img align="right" width="180px" src="./assets/icon.png" title="logo" />
 I have tried my best to implement all possible features and backend logic checks. I can do this more better but due to limitation of time I have to submit it as it is.
 
 A Splash Screen, which can handle some server/lazy loading in future.
@@ -63,27 +62,42 @@ Currently it is in English language while I can work on multi-language instructi
 
 # Debug APK
 
-![APP APK](/assets/app-debug.apk)
+[![Download](https://api.bintray.com/packages/wlanjie/maven/trinity/images/download.svg?version=1.0.0)](./assets/app-debug.apk)
 
 # Some App Screenshots
 
-![screenshot](/assets/video.gif)
-![screenshot](/assets/s1.jpg)
-![screenshot](/assets/s2.jpg)
-![screenshot](/assets/s3.jpg)
-![screenshot](/assets/s4.jpg)
-![screenshot](/assets/s5.jpg)
-![screenshot](/assets/s6.jpg)
-![screenshot](/assets/s7.jpg)
-![screenshot](/assets/s8.jpg)
-![screenshot](/assets/s9.jpg)
-![screenshot](/assets/s10.jpg)
-![screenshot](/assets/s11.jpg)
-![screenshot](/assets/s12.jpg)
-![screenshot](/assets/s13.jpg)
-![screenshot](/assets/s14.jpg)
-![screenshot](/assets/s15.jpg)
-![screenshot](/assets/s16.jpg)
-![screenshot](/assets/s17.jpg)
+<table>
+<tr>
+      <td align="center"><img align="left" width="200px" src="./assets/video.gif" title="logo" /></td>
+      <td align="center"><img align="left" width="200px" src="./assets/video.gif" title="logo" /></td>
+      <td align="center"><img align="left" width="200px" src="./assets/video.gif" title="logo" /></td>
+  </tr>
+  <tr>
+      <td><img align="left" width="200px" src="./assets/s1.jpg" title="screenshot" /></td>
+      <td><img align="left" width="200px" src="./assets/s2.jpg" title="screenshot" /></td>
+      <td><img align="left" width="200px" src="./assets/s3.jpg" title="screenshot" /></td>
+  </tr>
+  <tr>
+      <td><img align="left" width="200px" src="./assets/s4.jpg" title="screenshot" /></td>
+      <td><img align="left" width="200px" src="./assets/s5.jpg" title="screenshot" /></td>
+      <td><img align="left" width="200px" src="./assets/s6.jpg" title="screenshot" /></td>
+  </tr>
+  <tr>
+      <td><img align="left" width="200px" src="./assets/s7.jpg" title="screenshot" /></td>
+      <td><img align="left" width="200px" src="./assets/s8.jpg" title="screenshot" /></td>
+      <td><img align="left" width="200px" src="./assets/s9.jpg" title="screenshot" /></td>
+  </tr>
+  <tr>
+      <td><img align="left" width="200px" src="./assets/s10.jpg" title="screenshot" /></td>
+      <td><img align="left" width="200px" src="./assets/s11.jpg" title="screenshot" /></td>
+      <td><img align="left" width="200px" src="./assets/s12.jpg" title="screenshot" /></td>
+  </tr>
+  <tr>
+      <td><img align="left" width="200px" src="./assets/s13.jpg" title="screenshot" /></td>
+      <td><img align="left" width="200px" src="./assets/s16.jpg" title="screenshot" /></td>
+      <td><img align="left" width="200px" src="./assets/s15.jpg" title="screenshot" /></td>
+  </tr>
+  
+  </table>
 
 # Thanks
