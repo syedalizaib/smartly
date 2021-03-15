@@ -61,7 +61,7 @@ Currently it is in English language while I can work on multi-language instructi
 
 # Some App Screenshots
 
-![screenshot](/assets/video.mp4)
+![screenshot](/assets/video.gif)
 ![screenshot](/assets/s1.jpg)
 ![screenshot](/assets/s2.jpg)
 ![screenshot](/assets/s3.jpg)
