@@ -20,13 +20,13 @@ class CategoriesAdapter(var items: List<Category>, private val viewModel: HomeVi
 
     override fun onViewReady(viewDataBinding: ViewDataBinding, position: Int) {
         super.onViewReady(viewDataBinding, position)
-
+        //can be used for more login handling
         val binding = viewDataBinding as ViewListItemCategoryBinding
         val item = items[position]
 
     }
 
-    public fun updateScore(catScoreLisst: List<CategoryScore>) {
+    fun updateScore(catScoreLisst: List<CategoryScore>) {
         for (item in items) {
             for (catScore in catScoreLisst) {
                 if (item._id.equals(catScore.id.toString())) {

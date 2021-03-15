@@ -18,7 +18,7 @@ class AttemptedQuestionAdapter(var items: List<AttemptedQuestion>) : RecyclerBas
 
     override fun onViewReady(viewDataBinding: ViewDataBinding, position: Int) {
         super.onViewReady(viewDataBinding, position)
-
+    //can be used for more login handling
         val binding = viewDataBinding as ViewListItemQuestionBinding
         val item = items[position]
 

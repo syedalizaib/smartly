@@ -51,13 +51,4 @@ abstract class BaseFragment : Fragment() {
         App.getAppComponent().inject(this)
         isTablet = context.resources.getBoolean(R.bool.isTablet)
     }
-    /* protected fun loadFragment(fragment: Fragment?) {
-         val manager = activity!!.supportFragmentManager
-         if (manager.backStackEntryCount > 0) manager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
-         val transactionS = manager.beginTransaction()
-         transactionS.setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.pop_enter, R.anim.pop_exit)
-         transactionS.replace(R.id.container, fragment!!, "freg")
-         transactionS.addToBackStack(null)
-         transactionS.commit()
-     }*/
 }

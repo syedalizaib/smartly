@@ -46,8 +46,8 @@ class LoginGuestFragment : BaseFragment(), View.OnClickListener {
             }
         }
         binding.nameText.setOnKeyListener { view, keyCode, event ->
-//            loginViewModel.nameError.postValue("")
-            false
+
+        false
         }
         binding.nameText.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {

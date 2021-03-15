@@ -25,13 +25,8 @@ class QuickModeViewModel(private val repository: Repository) : ViewModel() {
     val isQuizCompleted = MutableLiveData<Boolean>()
     val isMcq = MutableLiveData<Boolean>()
     val quizLives = MutableLiveData<Int>()
-
-    //    val categoryID = MutableLiveData<String>()
     val quizQuestionsAttempted = MutableLiveData<Int>()
     val questionSeconds = MutableLiveData<Int>()
-
-    //    val difficultyLevel = MutableLiveData<String>()
-//    val questionType = MutableLiveData<String>()
     val questionList = MutableLiveData<ArrayList<Question>>()
     val currentQuestion = MutableLiveData<Question>()
     val mcqOptionList = MutableLiveData<ArrayList<String>>()

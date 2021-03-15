@@ -41,11 +41,6 @@ class SplashFragment : BaseFragment() {
         val view: ViewDataBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_splash, container, false)
         binding = view as FragmentSplashBinding
-        /*val textView: TextView = root.findViewById(R.id.text_home)
-        splashViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })*/
-
 
         return view.root
     }
@@ -68,11 +63,4 @@ class SplashFragment : BaseFragment() {
         else
             navController.navigate(R.id.action_splashFragment_to_loginFragment)
     }
-//    override fun onClick(v: View?) {
-//        when(v!!.id){
-//            R.id.view_transactions_btn -> navController!!.navigate(R.id.action_mainFragment_to_viewTransactionFragment)
-//            R.id.send_money_btn -> navController!!.navigate(R.id.action_mainFragment_to_chooseRecipientFragment)
-//            R.id.view_balance_btn -> navController!!.navigate(R.id.action_mainFragment_to_viewBalanceFragment)
-//        }
-//    }
 }

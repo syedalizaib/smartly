@@ -10,8 +10,6 @@ import com.renesis.smartly.R;
 
 public class MyEditText extends TextInputEditText {
 
-    //    private static final int DEFAULT_BACKGROUND = R.drawable.bg_solid_rounded_gray;
-//    private static final int DEFAULT_ERROR_BACKGROUND = R.drawable.bg_edit_text_error;
     private static final int DEFAULT_BACKGROUND = R.drawable.bg_solid_rectangle_gray_1;
     private static final int DEFAULT_ERROR_BACKGROUND = R.drawable.bg_solid_rectangle_red_1;
 

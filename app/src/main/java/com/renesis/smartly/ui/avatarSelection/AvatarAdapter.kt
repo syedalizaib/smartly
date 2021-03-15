@@ -18,19 +18,11 @@ class AvatarAdapter(var items: List<Int>) : RecyclerBaseAdapter() {
     override fun onViewReady(viewDataBinding: ViewDataBinding, position: Int) {
         super.onViewReady(viewDataBinding, position)
 
-        val binding = viewDataBinding as ViewListItemAvatarBinding
+        //can be used for more login handling
+        val binding =
+            viewDataBinding as ViewListItemAvatarBinding//can be used for more login handling
         val item = items[position]
 
-        /*var countText = "${item.itemCount} Item"
-        if (item.itemCount > 1)
-            countText = "${item.itemCount} Items"
-        binding.mtrlListItemCountText.text = countText
-        if (item.isChecked) {
-            binding.itemLayout.isSelected = true
-        }*/
-        /*binding.itemLayout.setOnClickListener {
-            if (item)
-        }*/
 
     }
 }

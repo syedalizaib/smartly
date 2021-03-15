@@ -1,5 +1,5 @@
 # Smartly-A Trivia App
-(/assets/icon.png)
+![icon](/assets/icon.png)
 # Breif Overview
 I have tried my best to implement all possible features and backend logic checks. I can do this more better but due to limitation of time I have to submit it as it is.
 
@@ -8,6 +8,8 @@ A welcome screen which will lead to login page and user can login as guest for n
 A home page containt setting icon which takes user to settings to control different selective options as mentioned in given task.
 Home page also contain a collapsing bar providing a good look. Categories and quick mode is given here which will lead user to question attempt.
 On bottom user's previously attempted questions are display.
+
+I didn't add proper comments but I'll add more comments in codes after submission. :)
 
 All the given tasks are implemented successfully. I tried my best to touch every aspect of implementation in a short time with an intuitive UI. I had to design, edit  and search for UI component.
 Attempted questions are saved locally. 
@@ -77,6 +79,6 @@ Currently it is in English language while I can work on multi-language instructi
 ![screenshot](/assets/s15.jpg)
 ![screenshot](/assets/s16.jpg)
 ![screenshot](/assets/s17.jpg)
-![screenshot](/assets/s18.jpg)
-![screenshot](/assets/s19.jpg)
 
+
+# Thanks

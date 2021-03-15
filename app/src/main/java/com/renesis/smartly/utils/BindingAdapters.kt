@@ -6,94 +6,19 @@ import android.graphics.drawable.GradientDrawable
 import android.os.Build
 import android.text.Html
 import android.view.View
-import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
 import androidx.databinding.BindingAdapter
-import androidx.databinding.InverseBindingAdapter
-import androidx.databinding.InverseBindingListener
 import androidx.lifecycle.LiveData
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.google.android.material.textfield.TextInputLayout
 import com.renesis.smartly.R
-import com.renesis.smartly.base.MyEditText
 
 
 val TAG = "BindingAdapters"
 
 
-@BindingAdapter("app:hideIfNotZero")
-fun hideIfNotEmptyList(view: View, number: LiveData<Int>) {
-    view.visibility = if (number.value == 0)
-        View.VISIBLE
-    else
-        View.GONE
-}
-
-@BindingAdapter("app:isEnabled")
-fun enabledBinding(view: View, enabled: LiveData<Boolean?>) {
-    view.isEnabled = enabled.value!!
-}
-
-@BindingAdapter("app:inputError")
-fun inputError(editText: EditText, error: LiveData<String?>?) {
-    if (error?.value.isNullOrEmpty()) {
-        editText.setBackgroundResource(R.drawable.bg_solid_rounded_gray)
-        editText.error = null
-    } else {
-        editText.error = error?.value.orEmpty()
-        editText.setBackgroundResource(R.drawable.bg_edit_text_error)
-    }
-}
-
-@BindingAdapter("app:onError")
-fun onError(editText: EditText, error: LiveData<String?>?) {
-    if (error?.value.isNullOrEmpty()) {
-        editText.setBackgroundResource(R.drawable.bg_solid_rounded_gray)
-
-    } else {
-        editText.setBackgroundResource(R.drawable.bg_edit_text_error)
-    }
-}
-
-
-@BindingAdapter("app:errorText")
-fun errorText(textInput: TextInputLayout, error: LiveData<String?>?) {
-    if (error?.value.isNullOrEmpty()) {
-        textInput.error = null
-    } else {
-        textInput.error = error?.value
-    }
-}
-
-//CUSTOM VIEW
-
-@BindingAdapter("app:errorField")
-fun errorField(textView: MyEditText, error: String?) {
-    textView.errorText = error
-}
-
-@InverseBindingAdapter(attribute = "app:errorField")
-fun errorFieldInverse(textView: MyEditText): String? {
-    return textView.errorText
-}
-
-@BindingAdapter(value = ["errorFieldAttrChanged"])
-fun setChangeListener(textView: MyEditText, listener: InverseBindingListener?) {
-    if (listener != null) {
-        textView.setErrorChangedListener { listener.onChange() }
-    }
-}
-
-@BindingAdapter(value = ["app:onValidation"])
-fun setValidationListener(textView: MyEditText, function: () -> Unit) {
-    textView.setValidationListener {
-        function.invoke()
-    }
-
-}
 
 @BindingAdapter("app:imageUrl")
 fun setImageUrl(imageView: ImageView, imageUrl: LiveData<String?>?) {

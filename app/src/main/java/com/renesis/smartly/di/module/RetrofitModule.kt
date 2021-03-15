@@ -26,19 +26,11 @@ open class RetrofitModule {
                     .build()
                 chain.proceed(newRequest)
             }
-//            .addInterceptor(AuthInterceptor(apiToken))
-            //    .addInterceptor(HttpLoggingInterceptor().apply { level= HttpLoggingInterceptor.Level.HEADERS})
-            //     .addInterceptor(HttpLoggingInterceptor().apply { level= HttpLoggingInterceptor.Level.BASIC})
             .addInterceptor(HttpLoggingInterceptor().apply {
                 level = HttpLoggingInterceptor.Level.BODY
             })
-//                .addInterceptor(LogServerErrorInterceptor(context))
-
-//                .callTimeout(60, TimeUnit.SECONDS)
             .readTimeout(30, TimeUnit.SECONDS)
             .writeTimeout(5, TimeUnit.MINUTES)
-            //.connectTimeout(60, TimeUnit.SECONDS)
-            //  .addInterceptor(ChuckInterceptor(context))
             .build()
 
         return Retrofit.Builder()

@@ -85,8 +85,6 @@ class HomeFragment : BaseFragment(), View.OnClickListener {
                     )
                 }
                 it.onItemLongClick = { index, model ->
-                    /*cateViewModel.multiSelection = true
-                    cateViewModel.updateSelectedList(model as Category, index)*/
                 }
             }
             binding.itemsView.adapter = categoriesAdapter

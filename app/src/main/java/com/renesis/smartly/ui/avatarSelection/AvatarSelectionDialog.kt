@@ -24,20 +24,12 @@ class AvatarSelectionDialog : DialogFragment(), View.OnClickListener {
     private lateinit var binding: DialogAvatarSelectionBinding
     private lateinit var adapter: AvatarAdapter
     private lateinit var avatarSelectionListener: AvatarSelectionListener
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        if (arguments == null) {
-
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-//        val view: View = inflater.inflate(R.layout.dialog_avatar_selection, container, false)
         val view: ViewDataBinding =
             DataBindingUtil.inflate(
                 inflater,
@@ -92,12 +84,9 @@ class AvatarSelectionDialog : DialogFragment(), View.OnClickListener {
                 avatarSelectionListener.onAvatarSelected(selectedAvatar)
             }
             it.onItemLongClick = { index, model ->
-                /*cateViewModel.multiSelection = true
-                cateViewModel.updateSelectedList(model as Category, index)*/
             }
         }
         binding.itemsView.adapter = adapter
-//        adapter.notifyDataSetChanged()
     }
 
     fun setAvatarSelectionListener(avatarSelectionListener: AvatarSelectionListener) {
