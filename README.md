@@ -71,7 +71,7 @@ Currently it is in English language while I can work on multi-language instructi
 
 # Debug APK
 
-[![Download](https://api.bintray.com/packages/wlanjie/maven/trinity/images/download.svg?version=1.0.0)](./assets/app-debug.apk)
+[![Download](https://api.bintray.com/packages/wlanjie/maven/trinity/images/download.svg?version=1.0.0)](https://github.com/syedalizaib/smartly/raw/master/assets/app-debug.apk)
 
 # Some App Screenshots
 
