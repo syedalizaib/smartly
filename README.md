@@ -67,9 +67,9 @@ Currently it is in English language while I can work on multi-language instructi
 
 # Some App Screenshots
 
-![screenshot](/assets/video.gif){:height="500px" width="200px"}
-![screenshot](/assets/s1.jpg){:height="500px" width="200px"}
-![screenshot](/assets/s2.jpg){:height="500px" width="200px"}
+![screenshot](/assets/video.gif)
+![screenshot](/assets/s1.jpg)
+![screenshot](/assets/s2.jpg)
 ![screenshot](/assets/s3.jpg)
 ![screenshot](/assets/s4.jpg)
 ![screenshot](/assets/s5.jpg)
