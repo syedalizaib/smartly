@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.renesis.smartly.entities.AttemptedQuestion" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_20dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_marginEnd="@dimen/margin_20dp"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/margin_10dp"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin_10dp"
+                android:textAppearance="?attr/textAppearanceSubtitle1"
+                android:textColor="@color/colorDarkGrayB"
+                android:textSize="@dimen/text_size_small"
+                app:setText="@{viewmodel.question}" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_text"
+                        android:backgroundTint="@color/colorPrimaryDarkD"
+                        android:paddingStart="@dimen/margin_10dp"
+                        android:paddingTop="@dimen/margin_2dp"
+                        android:paddingEnd="@dimen/margin_10dp"
+                        android:paddingBottom="@dimen/margin_2dp"
+                        android:textColor="@color/google_blue"
+                        android:textSize="@dimen/text_size_extra_small"
+                        app:setText="@{viewmodel.category}" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_5dp"
+                        android:background="@drawable/rounded_text"
+                        android:backgroundTint="@color/colorPrimaryDarkD"
+                        android:paddingStart="@dimen/margin_10dp"
+                        android:paddingTop="@dimen/margin_2dp"
+                        android:paddingEnd="@dimen/margin_10dp"
+                        android:paddingBottom="@dimen/margin_2dp"
+                        android:textColor="@color/google_blue"
+                        android:textSize="@dimen/text_size_extra_small"
+                        app:setText="@{viewmodel.difficulty}" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:background="@{viewmodel.question_passed? @drawable/button_correct : @drawable/button_wrong}"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_5dp"
+                    android:text="@{viewmodel.question_passed? @string/passed :@string/failed}"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_small" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

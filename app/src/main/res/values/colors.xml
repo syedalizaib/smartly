@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_500">#62d76b</color>
+    <color name="primary_200">#428F48</color>
+    <color name="purple_700">#4d4d87</color>
+    <color name="teal_200">#87b4fd</color>
+    <color name="teal_500">#6ea1f4</color>
+    <color name="teal_700">#5e99fb</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorAccent">#FBC02D</color>
+    <color name="colorAccentDark">#3e416d</color>
+    <color name="colorPrimary">#62d76b</color>
+    <color name="colorPrimaryDark">#3e416d</color>
+    <color name="mimo_light">#eff4fd</color>
+    <color name="mimo_background">#f9fafe</color>
+    <color name="colorPrimaryDarkD">#bfdaf9</color>
+
+    <color name="colorGray">#eeeeee</color>
+    <color name="background">#dddddd</color>
+    <color name="txtcolor">#FFFFFF</color>
+
+    <color name="colorPrimary1">#607D8B</color>
+    <color name="colorPrimaryDark1">#607D8B</color>
+    <color name="text_shadow">#c1c1c0</color>
+    <color name="colorDarkGrayB">#455A64</color>
+    <color name="colorAccentRed">#D32F2F</color>
+    <color name="blue">#3a5897</color>
+    <color name="yellow_overlay">#C9FFEB3B</color>
+    <color name="signinbtnlight">#3ebeb1</color>
+    <color name="signinbtndark">#228FA9</color>
+    <color name="fbsigninbtnlight">#3B8E98</color>
+    <color name="fbsigninbtndark">#3B5999</color>
+    <color name="gmailsigninbtnlight">#DE7537</color>
+    <color name="gmailsigninbtndark">#DF4938</color>
+
+
+    <color name="navbartext">#4d4d87</color>
+    <color name="gray">#999999</color>
+    <color name="gray_light">#CCCCCC</color>
+    <color name="gray_overlay">#B9CCCCCC</color>
+    <color name="gray_very_light">#e0e0e0</color>
+    <color name="gray_deep">#666666</color>
+    <color name="black_overlay_light">#52000000</color>
+    <color name="black_overlay">#83000000</color>
+    <color name="black_overlay_dark">#CD000000</color>
+    <color name="blue_overlay">#C9FFEB3B</color>
+    <color name="white_overlay">#b1ffffff</color>
+    <color name="activity_background">#EEEEEE</color>
+    <color name="transparent">#00000000</color>
+    <color name="main_background">#eeeeee</color>
+    <color name="google_assistant_background">#F5F5F5</color>
+
+    <!-- Material Design Color - Color palette -->
+    <color name="red_primary">#F44336</color>
+    <color name="red_primary_dark">#D32F2F</color>
+    <color name="pink_primary">#E91E63</color>
+    <color name="pink_primary_dark">#C2185B</color>
+    <color name="purple_primary">#9C27B0</color>
+    <color name="purple_primary_dark">#7B1FA2</color>
+    <color name="deep_purple_primary">#673AB7</color>
+    <color name="deep_purple_primary_dark">#512DA8</color>
+    <color name="indigo_primary">#3F51B5</color>
+    <color name="indigo_primary_dark">#303F9F</color>
+    <color name="blue_primary">#2196F3</color>
+    <color name="blue_primary_dark">#1976D2</color>
+    <color name="light_blue_primary">#03A9F4</color>
+    <color name="light_blue_primary_dark">#0288D1</color>
+    <color name="cyan_primary">#00BCD4</color>
+    <color name="cyan_primary_dark">#0097A7</color>
+    <color name="teal_primary">#009688</color>
+    <color name="teal_primary_dark">#00796B</color>
+    <color name="green_primary">#4CAF50</color>
+    <color name="green_primary_dark">#388E3C</color>
+    <color name="light_green_primary">#8BC34A</color>
+    <color name="light_green_primary_dark">#689F38</color>
+    <color name="lime_primary">#CDDC39</color>
+    <color name="lime_primary_dark">#AFB42B</color>
+    <color name="yellow_primary">#FFEB3B</color>
+    <color name="yellow_primary_dark">#FBC02D</color>
+    <color name="amber_primary">#FFC107</color>
+    <color name="amber_primary_dark">#FFA000</color>
+    <color name="orange_primary">#FF9800</color>
+    <color name="orange_primary_dark">#F57C00</color>
+    <color name="deep_orange_primary">#FF5722</color>
+    <color name="deep_orange_primary_dark">#E64A19</color>
+    <color name="brown_primary">#795548</color>
+    <color name="brown_primary_dark">#5D4037</color>
+    <color name="grey_primary">#9E9E9E</color>
+    <color name="grey_primary_dark">#616161</color>
+    <color name="blue_grey_primary">#607D8B</color>
+    <color name="blue_grey_primary_dark">#455A64</color>
+
+    <!-- Google Logo Color -->
+    <color name="google_blue">#4285F4</color>
+    <color name="google_green">#34A853</color>
+    <color name="google_yellow">#FBBC05</color>
+    <color name="google_red">#EA4335</color>
+
+    <!-- Google Apps Color -->
+    <color name="app_blue">#4285f4</color>
+    <color name="app_blue_dark">#3367d6</color>
+    <color name="app_green">#0f9d58</color>
+    <color name="app_green_dark">#0b8043</color>
+    <color name="app_yellow">#f4b400</color>
+    <color name="app_yellow_dark">#f09300</color>
+    <color name="app_red">#db4437</color>
+
+
+    <color name="accent">#03A9F4</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="divider1">#fafafa</color>
+    <color name="divider2">#f5f5f5</color>
+    <color name="divider3">#e2e2e2</color>
+    <color name="red">#FF0000</color>
+    <color name="colorPrimaryDark2">#401666</color>
+    <color name="overweight">#f89748</color>
+    <color name="normalw">#0ae64d</color>
+</resources>

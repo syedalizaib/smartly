@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Smartly</string>
+    <string name="title_home">Home</string>
+    <string name="title_splash">SplashScreen</string>
+    <string name="title_login">Login</string>
+    <string name="exit_toast">Tap again to Exit</string>
+    <string name="contentdescription">contentDescription</string>
+    <string name="your_name">Your Name</string>
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
+    <string name="login">Login</string>
+    <string name="play_as_guest">Play as guest</string>
+    <string name="_true">True</string>
+    <string name="_false">False</string>
+    <string name="quizplay">QuizPlay</string>
+    <string name="button">Button</string>
+    <string name="passed">PASSED</string>
+    <string name="failed">FAILED</string>
+</resources>

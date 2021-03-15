@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.renesis.smartly.ui.quickmode.QuickModeViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@color/mimo_background"
+        android:fitsSystemWindows="true"
+        tools:context=".ui.quizPlay.QuizPlayFragment">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha=".1"
+            android:contentDescription="@string/contentdescription"
+            android:scaleType="centerCrop"
+            android:src="@drawable/abstract_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/teal_700" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/app_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    app:liftOnScroll="true">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_marginStart="@dimen/margin_20dp"
+                        android:layout_marginEnd="@dimen/margin_20dp"
+                        android:background="@drawable/grad_rc_bg"
+                        android:backgroundTint="@color/yellow_primary_dark"
+                        android:elevation="0dp"
+                        app:contentInsetEnd="0dp"
+                        app:contentInsetStart="0dp"
+                        app:contentInsetStartWithNavigation="0dp"
+                        app:popupTheme="@style/Widget.AppCompat.Toolbar">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/_50dp"
+                            android:paddingEnd="@dimen/_50dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/margin_20dp"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/question_count_txt"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:background="@drawable/circle"
+                                    android:backgroundTint="@color/colorPrimaryDark"
+                                    android:fontFamily="@font/font0"
+                                    android:gravity="center"
+                                    android:text="@{viewmodel.quizQuestionsAttempted.toString()}"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/text_size_normal"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin_20dp"
+                                android:background="@drawable/rounded_text"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:paddingStart="@dimen/margin_5dp"
+                                android:paddingTop="@dimen/margin_5dp"
+                                android:paddingBottom="@dimen/margin_5dp">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:clickable="true"
+                                    android:contentDescription="@string/contentdescription"
+                                    android:focusable="true"
+                                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                                    android:paddingTop="5dp"
+                                    app:srcCompat="@drawable/ic_alarm_clock"
+                                    app:tint="@color/colorPrimary" />
+
+                                <TextView
+                                    android:id="@+id/countdown_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:fontFamily="@font/font0"
+                                    android:gravity="center"
+                                    android:minWidth="@dimen/_50dp"
+                                    android:text="@{viewmodel.questionSeconds.toString()}"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="@dimen/text_size_normal"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/rounded_text"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:paddingStart="@dimen/margin_5dp"
+                                android:paddingTop="@dimen/margin_5dp"
+                                android:paddingBottom="@dimen/margin_5dp">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:clickable="true"
+                                    android:contentDescription="@string/contentdescription"
+                                    android:focusable="true"
+                                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                                    android:paddingTop="5dp"
+                                    app:srcCompat="@drawable/ic_heart" />
+
+                                <TextView
+                                    android:id="@+id/lives_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:fontFamily="@font/font0"
+                                    android:gravity="center"
+                                    android:minWidth="@dimen/_50dp"
+                                    android:text="@{viewmodel.quizLives.toString()}"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/colorAccentRed"
+                                    android:textSize="@dimen/text_size_normal"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </androidx.appcompat.widget.Toolbar>
+
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/question_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_50dp"
+                        android:layout_weight="1"
+                        android:autoSizeTextType="uniform"
+                        android:background="@drawable/rounded_text"
+                        android:backgroundTint="@color/colorPrimaryDarkD"
+                        android:drawableTop="@drawable/ic_question"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/margin_20dp"
+                        android:paddingTop="@dimen/margin_10dp"
+                        android:paddingEnd="@dimen/margin_20dp"
+                        android:paddingBottom="@dimen/margin_20dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/text_size_big"
+                        app:drawableTint="@color/colorPrimaryDark"
+                        app:setText="@{viewmodel.currentQuestion.question!=null?viewmodel.currentQuestion.question: @string/quizplay}" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:id="@+id/tf_btn_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:visibility="@{viewmodel.isMcq ? View.GONE : View.VISIBLE}">
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btn_true"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/button_height"
+                                android:layout_marginStart="@dimen/card_margin"
+                                android:layout_marginTop="@dimen/margin_10dp"
+                                android:layout_marginEnd="@dimen/margin_10dp"
+                                android:layout_marginBottom="@dimen/margin_5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/button_normal_background"
+                                android:drawableStart="@drawable/ic_tick"
+                                android:drawableTint="@color/white"
+                                android:enabled="@{viewmodel.isButtonEnabled}"
+                                android:onClick="@{(view) -> viewmodel.onClick(view)}"
+                                android:paddingStart="@dimen/card_margin"
+                                android:paddingEnd="@dimen/_30dp"
+                                android:text="@string/_true"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_big"
+                                app:correctAnswerAfterAttempt="@{viewmodel.correctAnswerAfterAttempt}"
+                                app:resetButtons="@{viewmodel.isButtonEnabled}" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btn_false"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/button_height"
+                                android:layout_marginStart="@dimen/margin_10dp"
+                                android:layout_marginTop="@dimen/margin_10dp"
+                                android:layout_marginEnd="@dimen/card_margin"
+                                android:layout_marginBottom="@dimen/margin_5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/button_normal_background"
+                                android:drawableStart="@drawable/ic_close"
+                                android:drawableTint="@color/colorPrimaryDark"
+                                android:enabled="@{viewmodel.isButtonEnabled}"
+                                android:onClick="@{(view) -> viewmodel.onClick(view)}"
+                                android:paddingStart="@dimen/card_margin"
+                                android:paddingEnd="@dimen/_30dp"
+                                android:text="@string/_false"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/text_size_big"
+                                app:correctAnswerAfterAttempt="@{viewmodel.correctAnswerAfterAttempt}"
+                                app:resetButtons="@{viewmodel.isButtonEnabled}" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/mcq_btn_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="@{viewmodel.isMcq ? View.VISIBLE : View.GONE}">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/btn_answer1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/margin_10dp"
+                                    android:layout_marginTop="@dimen/margin_5dp"
+                                    android:layout_marginEnd="@dimen/margin_5dp"
+                                    android:layout_marginBottom="@dimen/margin_5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/button_normal_background"
+                                    android:enabled="@{viewmodel.isButtonEnabled}"
+                                    android:maxHeight="100dp"
+                                    android:minHeight="@dimen/button_height"
+                                    android:onClick="@{(view) -> viewmodel.onClick(view)}"
+                                    android:paddingStart="@dimen/margin_5dp"
+                                    android:paddingEnd="@dimen/margin_5dp"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/text_size_normal"
+                                    android:textStyle="normal"
+                                    app:correctAnswerAfterAttempt="@{viewmodel.correctAnswerAfterAttempt}"
+                                    app:resetButtons="@{viewmodel.isButtonEnabled}"
+                                    app:setText="@{viewmodel.mcqOptionList.size()>=3 ? viewmodel.mcqOptionList.get(0) : @string/button}" />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/btn_answer2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/margin_5dp"
+                                    android:layout_marginTop="@dimen/margin_5dp"
+                                    android:layout_marginEnd="@dimen/margin_10dp"
+                                    android:layout_marginBottom="@dimen/margin_5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/button_normal_background"
+                                    android:enabled="@{viewmodel.isButtonEnabled}"
+                                    android:maxHeight="100dp"
+                                    android:minHeight="@dimen/button_height"
+                                    android:onClick="@{(view) -> viewmodel.onClick(view)}"
+                                    android:paddingStart="@dimen/margin_5dp"
+                                    android:paddingEnd="@dimen/margin_5dp"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/text_size_normal"
+                                    android:textStyle="normal"
+                                    app:correctAnswerAfterAttempt="@{viewmodel.correctAnswerAfterAttempt}"
+                                    app:resetButtons="@{viewmodel.isButtonEnabled}"
+                                    app:setText="@{viewmodel.mcqOptionList.size()>=3 ? viewmodel.mcqOptionList.get(1) : @string/button}" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/btn_answer3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/margin_10dp"
+                                    android:layout_marginTop="@dimen/margin_5dp"
+                                    android:layout_marginEnd="@dimen/margin_5dp"
+                                    android:layout_marginBottom="@dimen/margin_5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/button_normal_background"
+                                    android:enabled="@{viewmodel.isButtonEnabled}"
+                                    android:maxHeight="100dp"
+                                    android:minHeight="@dimen/button_height"
+                                    android:onClick="@{(view) -> viewmodel.onClick(view)}"
+                                    android:paddingStart="@dimen/margin_5dp"
+                                    android:paddingEnd="@dimen/margin_5dp"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/text_size_normal"
+                                    android:textStyle="normal"
+                                    app:correctAnswerAfterAttempt="@{viewmodel.correctAnswerAfterAttempt}"
+                                    app:resetButtons="@{viewmodel.isButtonEnabled}"
+                                    app:setText="@{viewmodel.mcqOptionList.size()>=3 ? viewmodel.mcqOptionList.get(2) : @string/button}" />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/btn_answer4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/margin_5dp"
+                                    android:layout_marginTop="@dimen/margin_5dp"
+                                    android:layout_marginEnd="@dimen/margin_10dp"
+                                    android:layout_marginBottom="@dimen/margin_5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/button_normal_background"
+                                    android:enabled="@{viewmodel.isButtonEnabled}"
+                                    android:maxHeight="100dp"
+                                    android:minHeight="@dimen/button_height"
+                                    android:onClick="@{(view) -> viewmodel.onClick(view)}"
+                                    android:paddingStart="@dimen/margin_5dp"
+                                    android:paddingEnd="@dimen/margin_5dp"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/text_size_normal"
+                                    android:textStyle="normal"
+                                    app:correctAnswerAfterAttempt="@{viewmodel.correctAnswerAfterAttempt}"
+                                    app:resetButtons="@{viewmodel.isButtonEnabled}"
+                                    app:setText="@{viewmodel.mcqOptionList.size()>=3 ? viewmodel.mcqOptionList.get(3) : @string/button}" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/correct_answer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white_overlay"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="@{viewmodel.correctIsVisible? View.VISIBLE : View.GONE}">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Correct!"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10dp">
+
+                    <ProgressBar
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/circular_progress_bg"
+                        android:indeterminate="false"
+                        android:max="3"
+                        android:min="0"
+                        android:progress="@{viewmodel.answerResultTicking}"
+                        android:progressDrawable="@drawable/circular_progress_primary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@{viewmodel.answerResultTicking.toString()}"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="48sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/wrone_answer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white_overlay"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="@{viewmodel.wrongIsVisible? View.VISIBLE : View.GONE}">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Wrong!"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorAccentRed"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10dp">
+
+                    <ProgressBar
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/circular_progress_bg"
+                        android:indeterminate="false"
+                        android:max="3"
+                        android:min="0"
+                        android:progress="@{viewmodel.answerResultTicking}"
+                        android:progressDrawable="@drawable/circular_progress_primary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@{viewmodel.answerResultTicking.toString()}"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="48sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white_overlay"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="@{viewmodel.isQuizCompleted ? View.VISIBLE : View.GONE}">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Hurrah!"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_20dp"
+                    android:gravity="center"
+                    android:text="Hurrah!\nYou have finished this quiz."
+                    android:textAllCaps="true"
+                    android:textColor="@color/teal_700"
+                    android:textSize="@dimen/text_size_big"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Your Score: "
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorAccentRed"
+                        android:textSize="@dimen/text_size_big"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@{viewmodel.totalScore.toString()}"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="48sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10dp"
+                    android:layout_marginTop="@dimen/margin_5dp"
+                    android:layout_marginEnd="@dimen/margin_5dp"
+                    android:layout_marginBottom="@dimen/margin_5dp"
+                    android:background="@drawable/button_normal_background"
+                    android:drawableStart="@drawable/ic_close"
+                    android:drawableTint="@color/white"
+                    android:gravity="center"
+                    android:maxHeight="100dp"
+                    android:minWidth="200dp"
+                    android:minHeight="@dimen/button_height"
+                    android:paddingStart="@dimen/margin_10dp"
+                    android:paddingEnd="@dimen/margin_10dp"
+                    android:text="Close"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/mimo_background"
+                android:visibility="@{viewmodel.loadingBarIsVisible? View.VISIBLE : View.GONE}">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha=".1"
+                    android:contentDescription="@string/contentdescription"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/abstract_bg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/teal_700" />
+
+                <LinearLayout
+                    android:id="@+id/loading_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Preparing your quiz!"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorDarkGrayB"
+                        android:textSize="@dimen/text_size_normal"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/loadingAnimation"
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:background="@drawable/loading_anim"
+                        android:contentDescription="@string/contentdescription"
+                        android:padding="2dp"
+                        app:playAnimation="@{true}" />
+
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

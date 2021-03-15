@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.renesis.smartly.ui.login.LoginViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mimo_background"
+        tools:context=".ui.login.IntroFragment">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha=".1"
+            android:contentDescription="@string/contentdescription"
+            android:scaleType="centerCrop"
+            android:src="@drawable/abstract_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/teal_700" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginStart="@dimen/card_margin"
+            android:layout_marginEnd="@dimen/card_margin"
+            android:background="@drawable/grad_rc_bg"
+            android:backgroundTint="@color/cyan_primary"
+            android:gravity="center"
+            android:text="Login"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ScrollView
+            android:id="@+id/root_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_width"
+                        android:layout_height="@dimen/icon_height"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/contentdescription"
+                        android:padding="0dp"
+                        android:src="@mipmap/ic_launcher_round"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_width"
+                        android:layout_height="@dimen/icon_height"
+                        android:layout_marginStart="25dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:contentDescription="@string/contentdescription"
+                        android:padding="15dp"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/ic_gk" />
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_width"
+                        android:layout_height="@dimen/icon_height"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="25dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/teal_700"
+                        android:contentDescription="@string/contentdescription"
+                        android:padding="15dp"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/ic_mythology" />
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_width"
+                        android:layout_height="@dimen/icon_height"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="0dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/colorAccentRed"
+                        android:contentDescription="@string/contentdescription"
+                        android:padding="15dp"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/ic_snn" />
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_width"
+                        android:layout_height="@dimen/icon_height"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="0dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/yellow_primary_dark"
+                        android:contentDescription="@string/contentdescription"
+                        android:padding="15dp"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/ic_settings" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginBottom="@dimen/margin_10dp"
+                    android:fontFamily="@font/font0"
+                    android:gravity="center"
+                    android:text="Login with"
+                    android:textColor="@color/colorDarkGrayB"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_facebook_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginStart="@dimen/card_margin"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:layout_marginEnd="@dimen/card_margin"
+                    android:layout_marginBottom="@dimen/margin_5dp"
+                    android:background="@drawable/button_1_background"
+                    android:backgroundTint="@color/fbsigninbtndark"
+                    android:drawableStart="@drawable/ic_fb"
+                    android:drawableTint="@color/white"
+                    android:paddingVertical="@dimen/margin_10dp"
+                    android:paddingStart="@dimen/card_margin"
+                    android:paddingEnd="@dimen/_30dp"
+                    android:text="@string/facebook"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_google_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginStart="@dimen/card_margin"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:layout_marginEnd="@dimen/card_margin"
+                    android:layout_marginBottom="@dimen/margin_5dp"
+                    android:background="@drawable/button_1_background"
+                    android:backgroundTint="@color/gmailsigninbtndark"
+                    android:drawableStart="@drawable/ic_google"
+                    android:drawableTint="@color/white"
+                    android:paddingVertical="@dimen/margin_10dp"
+                    android:paddingStart="@dimen/card_margin"
+                    android:paddingEnd="@dimen/_30dp"
+                    android:text="@string/google"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginBottom="@dimen/margin_10dp"
+                    android:fontFamily="@font/font0"
+                    android:gravity="center"
+                    android:text="or"
+                    android:textColor="@color/colorDarkGrayB"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_guest_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginStart="@dimen/card_margin"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:layout_marginEnd="@dimen/card_margin"
+                    android:layout_marginBottom="@dimen/margin_5dp"
+                    android:background="@drawable/button_1_background"
+                    android:drawableStart="@drawable/ic_profile"
+                    android:drawableTint="@color/white"
+                    android:paddingStart="@dimen/card_margin"
+                    android:paddingEnd="@dimen/_30dp"
+                    android:text="@string/play_as_guest"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_normal" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
