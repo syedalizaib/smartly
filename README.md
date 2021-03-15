@@ -1,6 +1,9 @@
 # Smartly-A Trivia App
+
 ![icon](/assets/icon.png)
+
 # Breif Overview
+
 I have tried my best to implement all possible features and backend logic checks. I can do this more better but due to limitation of time I have to submit it as it is.
 
 A Splash Screen, which can handle some server/lazy loading in future.
@@ -11,15 +14,16 @@ On bottom user's previously attempted questions are display.
 
 I didn't add proper comments but I'll add more comments in codes after submission. :)
 
-All the given tasks are implemented successfully. I tried my best to touch every aspect of implementation in a short time with an intuitive UI. I had to design, edit  and search for UI component.
-Attempted questions are saved locally. 
+All the given tasks are implemented successfully. I tried my best to touch every aspect of implementation in a short time with an intuitive UI. I had to design, edit and search for UI component.
+Attempted questions are saved locally.
 Score is saved category wise and displayed on each category as well as collectively.
 User will have 5 seconds for each question and 3 lives in a quiz. after every question a 3 second pause is added to give a good user experience.
 Rules are same as mentioned in task.
 Quick mode is also implemented. A set of 20 random questions with random type, topic and difficulty level will be queried and once 5 questions are left to attempt further 20 will be queried in background and added in questions' stack.
 
 # Some Known issues/ Improvements
-There are some network and UI lifecycle checks which I couldn't implement due to time issues. 
+
+There are some network and UI lifecycle checks which I couldn't implement due to time issues.
 I also planned to implement some sounds, to be played on user interaction with app UI.
 I can implement animations on views to make it more appealing.
 Logout button does clear login session. But it doesn't redirect to login page. That's not a big issue. I can do fix it. On I logout I didnt clear local for testing purpose. DB wipe method can be called to do so.
@@ -27,6 +31,7 @@ UI is mostly responsive but I can make more responsive for Tab layouts as well.
 Currently it is in English language while I can work on multi-language instructions.
 
 # Gradle Dependencies I used
+
 ```
 	implementation 'androidx.core:core-ktx:1.3.2'
     implementation 'androidx.appcompat:appcompat:1.2.0'
@@ -55,15 +60,16 @@ Currently it is in English language while I can work on multi-language instructi
     implementation "com.google.dagger:dagger:2.27"
     kapt "com.google.dagger:dagger-compiler:2.27"
 ```
-# Debug APK 
+
+# Debug APK
 
 ![APP APK](/assets/app-debug.apk)
 
 # Some App Screenshots
 
-![screenshot](/assets/video.gif)
-![screenshot](/assets/s1.jpg)
-![screenshot](/assets/s2.jpg)
+![screenshot](/assets/video.gif){:height="500px" width="200px"}
+![screenshot](/assets/s1.jpg){:height="500px" width="200px"}
+![screenshot](/assets/s2.jpg){:height="500px" width="200px"}
 ![screenshot](/assets/s3.jpg)
 ![screenshot](/assets/s4.jpg)
 ![screenshot](/assets/s5.jpg)
@@ -79,6 +85,5 @@ Currently it is in English language while I can work on multi-language instructi
 ![screenshot](/assets/s15.jpg)
 ![screenshot](/assets/s16.jpg)
 ![screenshot](/assets/s17.jpg)
-
 
 # Thanks
