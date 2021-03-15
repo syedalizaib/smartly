@@ -93,7 +93,7 @@
                                     android:backgroundTint="@color/colorPrimaryDark"
                                     android:fontFamily="@font/font0"
                                     android:gravity="center"
-                                    android:text="@{viewmodel.quizQuestionsAttempted.toString()}"
+                                    android:text="0"
                                     android:textAllCaps="true"
                                     android:textColor="@color/white"
                                     android:textSize="@dimen/text_size_normal"
@@ -132,7 +132,7 @@
                                     android:fontFamily="@font/font0"
                                     android:gravity="center"
                                     android:minWidth="@dimen/_50dp"
-                                    android:text="@{viewmodel.questionSeconds.toString()}"
+                                    android:text="0"
                                     android:textAllCaps="true"
                                     android:textColor="@color/colorPrimary"
                                     android:textSize="@dimen/text_size_normal"
@@ -171,7 +171,7 @@
                                     android:fontFamily="@font/font0"
                                     android:gravity="center"
                                     android:minWidth="@dimen/_50dp"
-                                    android:text="@{viewmodel.quizLives.toString()}"
+                                    android:text="0"
                                     android:textAllCaps="true"
                                     android:textColor="@color/colorAccentRed"
                                     android:textSize="@dimen/text_size_normal"
@@ -402,45 +402,57 @@
                 android:orientation="vertical"
                 android:visibility="@{viewmodel.correctIsVisible? View.VISIBLE : View.GONE}">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_20dp"
+                    android:background="@drawable/rounded_text"
+                    android:backgroundTint="@color/mimo_background"
                     android:gravity="center"
-                    android:text="Correct!"
-                    android:textAllCaps="true"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="36sp"
-                    android:textStyle="bold" />
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_10dp">
-
-                    <ProgressBar
-                        style="?android:attr/progressBarStyleHorizontal"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_centerInParent="true"
-                        android:background="@drawable/circular_progress_bg"
-                        android:indeterminate="false"
-                        android:max="3"
-                        android:min="0"
-                        android:progress="@{viewmodel.answerResultTicking}"
-                        android:progressDrawable="@drawable/circular_progress_primary" />
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_20dp"
+                    android:visibility="visible">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
                         android:gravity="center"
-                        android:text="@{viewmodel.answerResultTicking.toString()}"
+                        android:text="Correct!"
                         android:textAllCaps="true"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="48sp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="36sp"
                         android:textStyle="bold" />
-                </RelativeLayout>
 
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10dp">
+
+                        <ProgressBar
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/circular_progress_bg"
+                            android:indeterminate="false"
+                            android:max="3"
+                            android:min="0"
+                            android:progress="@{viewmodel.answerResultTicking}"
+                            android:progressDrawable="@drawable/circular_progress_primary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="@{viewmodel.answerResultTicking.toString()}"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="48sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -452,44 +464,57 @@
                 android:orientation="vertical"
                 android:visibility="@{viewmodel.wrongIsVisible? View.VISIBLE : View.GONE}">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_20dp"
+                    android:background="@drawable/rounded_text"
+                    android:backgroundTint="@color/mimo_background"
                     android:gravity="center"
-                    android:text="Wrong!"
-                    android:textAllCaps="true"
-                    android:textColor="@color/colorAccentRed"
-                    android:textSize="36sp"
-                    android:textStyle="bold" />
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_20dp"
+                    android:visibility="visible">
 
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_10dp">
-
-                    <ProgressBar
-                        style="?android:attr/progressBarStyleHorizontal"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_centerInParent="true"
-                        android:background="@drawable/circular_progress_bg"
-                        android:indeterminate="false"
-                        android:max="3"
-                        android:min="0"
-                        android:progress="@{viewmodel.answerResultTicking}"
-                        android:progressDrawable="@drawable/circular_progress_primary" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
                         android:gravity="center"
-                        android:text="@{viewmodel.answerResultTicking.toString()}"
+                        android:text="Wrong!"
                         android:textAllCaps="true"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="48sp"
+                        android:textColor="@color/colorAccentRed"
+                        android:textSize="36sp"
                         android:textStyle="bold" />
-                </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10dp">
+
+                        <ProgressBar
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/circular_progress_bg"
+                            android:indeterminate="false"
+                            android:max="3"
+                            android:min="0"
+                            android:progress="@{viewmodel.answerResultTicking}"
+                            android:progressDrawable="@drawable/circular_progress_primary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="@{viewmodel.answerResultTicking.toString()}"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="48sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -500,76 +525,88 @@
                 android:orientation="vertical"
                 android:visibility="@{viewmodel.isQuizCompleted ? View.VISIBLE : View.GONE}">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Hurrah!"
-                    android:textAllCaps="true"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="36sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/margin_20dp"
-                    android:gravity="center"
-                    android:text="Hurrah!\nYou have finished this quiz."
-                    android:textAllCaps="true"
-                    android:textColor="@color/teal_700"
-                    android:textSize="@dimen/text_size_big"
-                    android:textStyle="bold" />
-
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_10dp"
-                    android:gravity="center">
+                    android:layout_margin="@dimen/margin_20dp"
+                    android:background="@drawable/rounded_text"
+                    android:backgroundTint="@color/mimo_background"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_20dp"
+                    android:visibility="visible">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Your Score: "
+                        android:text="Hurrah!"
                         android:textAllCaps="true"
-                        android:textColor="@color/colorAccentRed"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="36sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_20dp"
+                        android:gravity="center"
+                        android:text="You have finished this quiz."
+                        android:textAllCaps="true"
+                        android:textColor="@color/teal_700"
                         android:textSize="@dimen/text_size_big"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="@{viewmodel.totalScore.toString()}"
-                        android:textAllCaps="true"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="48sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
+                        android:layout_marginTop="@dimen/margin_10dp"
+                        android:gravity="center">
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_close"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_10dp"
-                    android:layout_marginTop="@dimen/margin_5dp"
-                    android:layout_marginEnd="@dimen/margin_5dp"
-                    android:layout_marginBottom="@dimen/margin_5dp"
-                    android:background="@drawable/button_normal_background"
-                    android:drawableStart="@drawable/ic_close"
-                    android:drawableTint="@color/white"
-                    android:gravity="center"
-                    android:maxHeight="100dp"
-                    android:minWidth="200dp"
-                    android:minHeight="@dimen/button_height"
-                    android:paddingStart="@dimen/margin_10dp"
-                    android:paddingEnd="@dimen/margin_10dp"
-                    android:text="Close"
-                    android:textAllCaps="true"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/text_size_normal"
-                    android:textStyle="normal" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Your Score: "
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorAccentRed"
+                            android:textSize="@dimen/text_size_big"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@{viewmodel.totalScore.toString()}"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="48sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_10dp"
+                        android:layout_marginTop="@dimen/margin_5dp"
+                        android:layout_marginEnd="@dimen/margin_5dp"
+                        android:layout_marginBottom="@dimen/margin_5dp"
+                        android:background="@drawable/button_normal_background"
+                        android:drawableStart="@drawable/ic_close"
+                        android:drawableTint="@color/white"
+                        android:gravity="center"
+                        android:maxHeight="100dp"
+                        android:minWidth="200dp"
+                        android:minHeight="@dimen/button_height"
+                        android:paddingStart="@dimen/margin_10dp"
+                        android:paddingEnd="@dimen/margin_10dp"
+                        android:text="Close"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_normal"
+                        android:textStyle="normal" />
+                </LinearLayout>
             </LinearLayout>
 
             <RelativeLayout
